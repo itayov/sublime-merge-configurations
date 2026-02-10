@@ -1,0 +1,17 @@
+[
+  {
+    "caption": "Fixup onto selected commit",
+    "command": "git",
+    "args": { "argv": ["commit", "--fixup", "$commit"] }
+  },
+  {
+    "caption": "Pull branch without checkout",
+    "command": "git",
+    "args": { "argv": ["fetch", "origin", "$select_branch:$select_branch"] }
+  },
+  {
+    "caption": "Self interactive rebase",
+    "command": "git",
+    "args": { "argv": ["sir", "$select_branch"] }
+  }
+]

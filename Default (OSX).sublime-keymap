@@ -1,0 +1,22 @@
+[
+  {
+    "keys": ["ctrl+f"],
+    "command": "git",
+    "args": { "argv": ["commit", "--fixup", "$commit"] }
+  },
+  {
+    "keys": ["ctrl+d"],
+    "command": "git",
+    "args": { "argv": ["fetch", "origin", "develop:develop"] }
+  },
+  {
+    "keys": ["ctrl+r"],
+    "command": "git",
+    "args": { "argv": ["rebase", "develop"] }
+  },
+  {
+    "keys": ["ctrl+s"],
+    "command": "git",
+    "args": { "argv": ["sir", "develop"] }
+  }
+]
