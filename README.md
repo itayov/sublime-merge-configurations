@@ -10,7 +10,7 @@ Configuration files for a better use of Sublime Merge git client
 2. Run in shell (one line, no copy-paste issues):
 
 ```bash
-curl -sL https://raw.githubusercontent.com/itayov/sublime-merge-configurations/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/itayov/sublime-merge-configurations/main/install.sh | bash
 ```
 
 Or run the steps manually:
@@ -19,7 +19,7 @@ Or run the steps manually:
 USER_DIR="$HOME/Library/Application Support/Sublime Merge/Packages/User"
 REPO_URL="https://github.com/itayov/sublime-merge-configurations.git"
 rm -f "$USER_DIR/Preferences.sublime-settings"
-if [ -d "$USER_DIR/.git" ]; then (cd "$USER_DIR" && git pull); else git clone "$REPO_URL" "$USER_DIR"; fi
+if [ -d "$USER_DIR/.git" ]; then git -C "$USER_DIR" fetch --prune origin && git -C "$USER_DIR" reset --hard origin/HEAD; else git clone "$REPO_URL" "$USER_DIR"; fi
 bash "$USER_DIR/setup.sh"
 ```
 
